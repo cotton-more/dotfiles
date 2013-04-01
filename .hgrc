@@ -1,0 +1,8 @@
+[ui]
+username = Ivan Nikulin <vansanblch@gmail.com>
+verbose = True
+
+[extensions]
+mq =
+color =
+graphlog =
