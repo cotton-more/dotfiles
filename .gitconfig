@@ -1,5 +1,13 @@
 [user]
     name = Ivan Nikulin
     email = vansanblch@gmail.com
+
 [color]
     ui = always
+
+[alias]
+    ci = commit
+    st = status -sb
+    ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short
+    standup = log --since '1 day ago' --oneline --author <vansanblch@gmail.com>
+    graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
