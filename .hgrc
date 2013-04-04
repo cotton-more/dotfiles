@@ -3,7 +3,7 @@ username = Ivan Nikulin <vansanblch@gmail.com>
 verbose = True
 
 [alias]
-lg = glog -l7
+g7 = glog -l7
 
 [extensions]
 mq =
