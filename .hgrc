@@ -1,11 +1,16 @@
 [ui]
 username = Ivan Nikulin <vansanblch@gmail.com>
 verbose = True
+merge = vimdiff
 
 [alias]
-g7 = glog -l7
+gg = glog -l7
 
 [extensions]
 mq =
 color =
 graphlog =
+
+[merge-tools]
+vimdiff.executable = vim
+vimdiff.args = -d -c "wincmd J" "$output" "$local" "$other" "$base"
