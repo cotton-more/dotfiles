@@ -1,7 +1,7 @@
 [ui]
 username = Ivan Nikulin <vansanblch@gmail.com>
 verbose = True
-merge = vimdiff
+merge = splice
 
 [alias]
 gg = glog -l7
@@ -14,3 +14,8 @@ graphlog =
 [merge-tools]
 vimdiff.executable = vim
 vimdiff.args = -d -c "wincmd J" "$output" "$local" "$other" "$base"
+
+splice.executable = vim
+splice.args = -f $base $local $other $output -c 'SpliceInit'
+splice.premerge = keep
+splice.priority = 1
