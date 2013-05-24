@@ -4,7 +4,7 @@ verbose = True
 merge = splice
 
 [alias]
-gg = glog -l7
+gg = glog -l7 --style compact
 
 [extensions]
 mq =
