@@ -6,6 +6,9 @@ merge = splice
 [alias]
 gg = glog -l7 --style compact
 
+[diff]
+ignorews=yes
+
 [extensions]
 mq =
 color =
