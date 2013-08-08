@@ -15,6 +15,7 @@ set nocompatible        " Must be first line
 " }
 
 " General {
+    set ttyfast
     filetype plugin indent on   " Automatically detect file types
     if !has('gui')
         set term=$TERM
@@ -93,6 +94,7 @@ set nocompatible        " Must be first line
         set laststatus=2
     endif
 
+    set nostartofline               " Keep cursor in same column for long-range motion cmds
     set backspace=indent,eol,start  " Backspace for dummies
     set linespace=0                 " No extra spaces between rows
     set showmatch                   " Show matching brackets/parenthesis
@@ -109,10 +111,14 @@ set nocompatible        " Must be first line
     set foldenable                  " Auto fold code
     set list
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+
+    set smarttab
+    set shiftround
 " }
 
 " Key (re)Mappings {
     noremap! hh <Esc>
+    noremap! jj <Esc>
 
     let mapleader = ','
     let maplocalleader = '-'
@@ -132,7 +138,7 @@ set nocompatible        " Must be first line
 
     " Toggle search highlighting
     nnoremap <silent> <leader>/ :nohl<CR>
-    
+
     nnoremap <tab> %
     vnoremap <tab> %
 
@@ -216,3 +222,10 @@ set nocompatible        " Must be first line
 " Finish local initializations {
     call InitializeDirectories()
 " }
+
+" ----------------------------------------------------------------------------
+" Allow overriding these settings
+" ----------------------------------------------------------------------------
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
