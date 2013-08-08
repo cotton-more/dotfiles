@@ -15,6 +15,8 @@ set nocompatible        " Must be first line
 " }
 
 " General {
+    set encoding = utf-8
+    set ffs = unix,dos,mac
     set ttyfast
     filetype plugin indent on   " Automatically detect file types
     if !has('gui')
@@ -57,6 +59,8 @@ set nocompatible        " Must be first line
 
     if has('gui_running')
         set guioptions-=T           " Remove the toolbar
+        set guioptions+=e
+        set guitablabel=%M\ %t
         set lines=40                " 40 lines of text instead of 24
         if has("gui_gtk2")
             set guifont=Andale\ Mono\ Regular\ 16,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
@@ -159,6 +163,12 @@ set nocompatible        " Must be first line
 
     " Tab for autocomplete in Insert mode
     imap <Tab> <C-N>
+
+    " Fast saving
+    nmap <leader>w :w!<cr>
+
+    " Toggle paste mode on and off
+    map <leader>pp :setlocal paste!<cr>:
 " }
 
 " Functions {
