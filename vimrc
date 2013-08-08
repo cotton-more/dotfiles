@@ -15,8 +15,8 @@ set nocompatible        " Must be first line
 " }
 
 " General {
-    set encoding = utf-8
-    set ffs = unix,dos,mac
+    set encoding=utf-8
+    set ffs=unix,dos,mac
     set ttyfast
     filetype plugin indent on   " Automatically detect file types
     if !has('gui')
@@ -63,14 +63,9 @@ set nocompatible        " Must be first line
         set guitablabel=%M\ %t
         set lines=40                " 40 lines of text instead of 24
         if has("gui_gtk2")
-            set guifont=Andale\ Mono\ Regular\ 16,Menlo\ Regular\ 15,Consolas\ Regular\ 16,Courier\ New\ Regular\ 18
-        elseif has("gui_mac")
-            set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
+            set guifont=Anonymous\ Pro\ 14,Consolas\ Regular\ 14,Courier\ New\ Regular\ 16
         elseif has("gui_win32")
-            set guifont=Andale_Mono:h10,Menlo:h10,Consolas:h10,Courier_New:h10
-        endif
-        if has('gui_macvim')
-            set transparency=5      " Make the window slightly transparent
+            set guifont=Anonymous_Pro:h15,Consolas:h10,Courier_New:h10
         endif
     else
         if &term == 'xterm' || &term == 'screen'
