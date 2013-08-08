@@ -15,6 +15,8 @@ set nocompatible        " Must be first line
 " }
 
 " General {
+    " Prevent cursor from moving back one character on insert mode exit
+    inoremap <silent> <Esc> <Esc>`^
     set encoding=utf-8
     set ffs=unix,dos,mac
     set ttyfast
