@@ -131,7 +131,10 @@ set nocompatible        " Must be first line
     vnoremap > >gv
 
     " Toggle search highlighting
-    nmap <silent> <leader>/ :nohl<CR>
+    nnoremap <silent> <leader>/ :nohl<CR>
+    
+    nnoremap <tab> %
+    vnoremap <tab> %
 
     " Adjust viewports to the same size
     map <Leader>= <C-w>=
