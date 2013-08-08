@@ -130,3 +130,6 @@ autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 
 " A start screen for Vim
 Bundle 'mhinz/vim-startify'
+
+" Perform all your vim insert mode completions with Tab
+Bundle 'ervandew/supertab'
