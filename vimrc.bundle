@@ -127,3 +127,6 @@ let g:vim_json_syntax_conceal = 0 " Do not hide quotes
 " Twig syntax highlighting, snipMate, etc.
 Bundle 'beyondwords/vim-twig'
 autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
+
+" A start screen for Vim
+Bundle 'mhinz/vim-startify'
