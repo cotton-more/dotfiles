@@ -39,17 +39,27 @@ set nocompatible        " Must be first line
     set nowb
     set noswapfile
 
-    if has('persistent_undo')
-        set undofile                " So is persistent undo ...
-        set undolevels=1000         " Maximum number of changes that can be undone
-        set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
-    endif
+    try
+        set undodir=~/.vimundo
+        if has('persistent_undo')
+            set undofile                " So is persistent undo ...
+            set undolevels=1000         " Maximum number of changes that can be undone
+            set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
+        endif
+    catch
+    endtry
 
     if has ('x') && has ('gui') " On Linux use + register for copy-paste
         set clipboard=unnamedplus
     elseif has ('gui')          " On mac and Windows, use * register for copy-paste
         set clipboard=unnamed
     endif
+
+    " Disable scrollbars (real hackers don't use scrollbars for navigation!)
+    set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
 " }
 
 " Formatting {
@@ -188,6 +198,8 @@ set nocompatible        " Must be first line
     endfunction
     " }
 " }
+
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " ----------------------------------------------------------------------------
 " Allow overriding these settings
