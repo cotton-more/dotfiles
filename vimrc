@@ -70,7 +70,8 @@ set nocompatible        " Must be first line
     else
         if &term == 'xterm' || &term == 'screen'
             set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-        endif endif
+        endif
+    endif
 
     set relativenumber
     set numberwidth=4
