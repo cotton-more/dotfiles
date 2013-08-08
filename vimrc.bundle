@@ -1,0 +1,129 @@
+" Colorscheme {
+    Bundle 'tpope/vim-vividchalk'
+    Bundle 'altercation/vim-colors-solarized'
+
+    let g:solarized_termcolors=256
+    let g:solarized_termtrans=1
+    let g:solarized_contrast="normal"
+    let g:solarized_visibility="high"
+    set background = "dark"
+
+
+    colorscheme solarized
+" }
+
+" NerdTree {
+    Bundle 'scrooloose/nerdtree'
+    let g:NERDShutUp=1
+    let b:match_ignorecase = 1
+    map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+    map <leader>e :NERDTreeFind<CR>
+    nmap <leader>nt :NERDTreeFind<CR>
+
+    let NERDTreeShowBookmarks=1
+    let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+    let NERDTreeChDirMode=0
+    let NERDTreeQuitOnOpen=1
+    let NERDTreeMouseMode=2
+    let NERDTreeShowHidden=1
+    let NERDTreeKeepTreeInNewTab=1
+    let g:nerdtree_tabs_open_on_gui_startup=0
+
+    Bundle 'jistr/vim-nerdtree-tabs'
+" }
+
+" Vim plugin for intensely orgasmic commenting
+Bundle 'scrooloose/nerdcommenter'
+
+Bundle 'tpope/vim-surround'
+
+" ctrlp {
+    Bundle 'kien/ctrlp.vim'
+
+    let g:ctrlp_working_path_mode = 'ra'
+    nnoremap <silent> <D-t> :CtrlP<CR>
+    nnoremap <silent> <D-r> :CtrlPMRU<CR>
+    let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+        \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+
+    " On Windows use "dir" as fallback command.
+    if has('win32') || has('win64')
+        let g:ctrlp_user_command = {
+            \ 'types': {
+                \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+                \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+            \ },
+            \ 'fallback': 'dir %s /-n /b /s /a-d'
+        \ }
+    else
+        let g:ctrlp_user_command = {
+            \ 'types': {
+                \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+                \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+            \ },
+            \ 'fallback': 'find %s -type f'
+        \ }
+    endif
+"}
+
+" vim-airline statusline {
+    Bundle 'bling/vim-airline'
+    let g:airline_theme='powerlineish'       " airline users use the powerline theme
+    let g:airline_powerline_fonts=1          " and the powerline fonts
+" }
+
+Bundle 'Lokaltog/vim-easymotion'
+
+Bundle 'ludovicchabant/vim-lawrencium'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+
+" UndoTree {
+    Bundle 'mbbill/undotree'
+    nnoremap <Leader>u :UndotreeToggle<CR>
+    " If undotree is opened, it is likely one wants to interact with it.
+    let g:undotree_SetFocusWhenToggle=1
+
+" }
+
+Bundle 'scrooloose/syntastic'
+
+" Vim plugin that displays tags in a window, ordered by class etc.
+if executable('ctags')
+    Bundle 'majutsushi/tagbar'
+endif
+
+" Python {
+    Bundle 'klen/python-mode'
+    Bundle 'python.vim'
+    Bundle 'python_match.vim'
+    Bundle 'pythoncomplete'
+    " PyMode {
+        let g:pymode_lint_checker = "pyflakes"
+        let g:pymode_utils_whitespaces = 0
+        let g:pymode_options = 0
+    " }
+" }
+
+" Three-way merge
+Bundle 'sjl/splice.vim'
+
+" extended % matching for HTML, LaTeX, and many other languages
+Bundle 'matchit.zip'
+
+" Vastly improved vim's javascript indentation.
+Bundle 'pangloss/vim-javascript'
+
+" CoffeeScript support for vim
+Bundle 'kchmck/vim-coffee-script'
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
+
+" Better JSON
+Bundle 'elzr/vim-json'
+let g:vim_json_syntax_conceal = 0 " Do not hide quotes
+
+" Twig syntax highlighting, snipMate, etc.
+Bundle 'beyondwords/vim-twig'
+autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
