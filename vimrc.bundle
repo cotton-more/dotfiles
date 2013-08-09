@@ -35,7 +35,9 @@
 " Vim plugin for intensely orgasmic commenting
 Bundle 'scrooloose/nerdcommenter'
 
+" All about "surrounding" parentheses, brackets, quotes, tags
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 
 " ctrlp {
     Bundle 'kien/ctrlp.vim'
@@ -75,6 +77,7 @@ Bundle 'tpope/vim-surround'
 
 Bundle 'Lokaltog/vim-easymotion'
 
+" A Mercurial wrapper
 Bundle 'ludovicchabant/vim-lawrencium'
 
 Bundle 'tpope/vim-fugitive'
@@ -130,3 +133,6 @@ autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 
 " A start screen for Vim
 Bundle 'mhinz/vim-startify'
+
+" HTML and CSS Zen coding
+Bundle 'mattn/emmet-vim'
