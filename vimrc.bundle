@@ -71,6 +71,10 @@ Bundle 'tpope/vim-repeat'
     endif
 "}
 
+" Buffer manager {
+    Bundle 'vim-script/bufexplorer.zip'
+" }
+
 " vim-airline statusline {
     Bundle 'bling/vim-airline'
     let g:airline_theme='powerlineish'       " airline users use the powerline theme
