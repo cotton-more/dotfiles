@@ -1,3 +1,5 @@
+Bundle 'gmarik/vundle'
+
 " Colorscheme {
     Bundle 'tpope/vim-vividchalk'
     Bundle 'altercation/vim-colors-solarized'
