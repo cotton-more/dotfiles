@@ -181,7 +181,7 @@ set nocompatible        " Must be first line
     nmap <leader>w :w!<cr>
 
     " Toggle paste mode on and off
-    map <leader>pp :setlocal paste!<cr>:
+    map <leader>pp :setlocal paste!<cr>
 " }
 
 " Functions {
