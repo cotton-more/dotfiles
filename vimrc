@@ -81,7 +81,7 @@ set nocompatible        " Must be first line
         set guitablabel=%M\ %t
         set lines=40                " 40 lines of text instead of 24
         if has("gui_gtk2")
-            set guifont=Anonymous\ Pro\ 14,Consolas\ Regular\ 14,Courier\ New\ Regular\ 16
+            set guifont=Ubuntu\ Mono\ 16,Anonymous\ Pro\ 14,Consolas\ Regular\ 14,Courier\ New\ Regular\ 16
         elseif has("gui_win32")
             set guifont=Anonymous_Pro:h15,Consolas:h10,Courier_New:h10
         endif
