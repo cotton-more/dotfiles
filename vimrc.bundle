@@ -138,7 +138,7 @@ Bundle 'mhinz/vim-startify'
 Bundle 'mattn/emmet-vim'
 
 " Snippets and Autocomplete {
-    Bundle 'shougo/neocomplete.vim'
+    Bundle 'Shougo/neocomplete.vim'
     " Disable AutoComplPop.
     let g:acp_enableAtStartup = 0
     " Use neocomplete.
