@@ -71,9 +71,7 @@ Bundle 'tpope/vim-repeat'
     endif
 "}
 
-" Buffer manager {
-    Bundle 'vim-script/bufexplorer.zip'
-" }
+Bundle 'Shougo/unite.vim'
 
 " vim-airline statusline {
     Bundle 'bling/vim-airline'
