@@ -179,6 +179,12 @@ set nocompatible        " Must be first line
 
     " Toggle paste mode on and off
     map <leader>pp :setlocal paste!<cr>
+
+    " Useful mappings for managing tabs
+    map <leader>tn :tabnew<cr>
+    map <leader>to :tabonly<cr>
+    map <leader>tc :tabclose<cr>
+    map <leader>tm :tabmove
 " }
 
 " Functions {
