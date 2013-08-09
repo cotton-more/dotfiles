@@ -21,6 +21,7 @@ set nocompatible        " Must be first line
     set ffs=unix,dos,mac
     set ttyfast
     filetype plugin indent on   " Automatically detect file types
+    set omnifunc=syntaxcomplete#Complete
     if !has('gui')
         set term=$TERM
     endif
