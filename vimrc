@@ -18,7 +18,8 @@ set nocompatible        " Must be first line
     " Prevent cursor from moving back one character on insert mode exit
     inoremap <silent> <Esc> <Esc>`^
     set encoding=utf-8
-    set ffs=unix,dos,mac
+    set fileencodings=utf-8,cp1251,koi8-r,cp866
+    set fileformats=unix,dos,mac
     set ttyfast
     filetype plugin indent on   " Automatically detect file types
     set omnifunc=syntaxcomplete#Complete
@@ -28,7 +29,7 @@ set nocompatible        " Must be first line
     syntax on                   " Syntax highlighting
     set mouse=a                 " Automatically enable mouse usage
     set mousehide               " Hide the mouse cursor while typing
-    scriptencoding utf-8
+    лвжл
 
     set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
     set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
@@ -173,9 +174,6 @@ set nocompatible        " Must be first line
     nnoremap <Right> :echoe "Use l"<CR>
     nnoremap <Up> :echoe "Use k"<CR>
     nnoremap <Down> :echoe "Use j"<CR>
-
-    " Tab for autocomplete in Insert mode
-    imap <Tab> <C-N>
 
     " Fast saving
     nmap <leader>w :w!<cr>
