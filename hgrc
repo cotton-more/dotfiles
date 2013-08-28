@@ -13,6 +13,7 @@ ignorews=yes
 mq =
 color =
 graphlog =
+rebase =
 
 [merge-tools]
 vimdiff.executable = vim
