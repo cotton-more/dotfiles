@@ -15,6 +15,7 @@ mq =
 color =
 graphlog =
 rebase =
+prompt = ~/hg-prompt/prompt.py
 
 [merge-tools]
 vimdiff.executable = vim
