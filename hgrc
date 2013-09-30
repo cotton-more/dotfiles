@@ -5,6 +5,7 @@ merge = splice
 
 [alias]
 gg = glog -l7 --style compact
+close = ci -m closed --close-branch
 
 [diff]
 ignorews=yes
