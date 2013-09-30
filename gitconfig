@@ -35,8 +35,10 @@
 tool = splice
 
 [mergetool "splice"]
-cmd = "gvim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
 trustExitCode = true
 
 [push]
     default = simple
+[url "https://"]
+	insteadOf = git://
