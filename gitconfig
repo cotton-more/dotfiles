@@ -12,6 +12,8 @@
     status = auto
 
 [alias]
+    co = checkout
+
     branches = branch -a
     remotes = remote -v
 
