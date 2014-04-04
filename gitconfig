@@ -4,6 +4,7 @@
 
 [core]
     editor = vim
+    whitespace = cr-at-eol
 
 [color]
     branch = auto
@@ -34,11 +35,14 @@
     uns = reset HEAD
 
 [merge]
-tool = splice
+tool = Gdiff
 
 [mergetool "splice"]
 cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
 trustExitCode = true
+
+[mergetool "Gdiff"]
+cmd = "vim $MERGED -c 'Gdiff'"
 
 [url "https://"]
 	insteadOf = git://
