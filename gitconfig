@@ -27,7 +27,7 @@
     standup = log --since '1 day ago' --oneline --author <vansanblch@gmail.com>
     graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
     # jwiegley/git-scripts
-    tree = !git-forest --pretty=format:\"%C(red)%h [%p] %C(magenta)(%ar) %C(blue)%an %C(reset)%s\" --style=1 --reverse
+    tree = !git-forest --pretty=format:\"%C(red)%h [%p] %C(magenta)(%ar) %C(blue)%an %C(reset)%s\" --style=15 --reverse
 
     d = !git diff | vim -R -
     di = !git diff --cached | vim -R -
