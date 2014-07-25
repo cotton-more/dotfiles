@@ -48,3 +48,5 @@ cmd = "vim $MERGED -c 'Gdiff'"
 
 [url "https://"]
 	insteadOf = git://
+[push]
+	default = simple
