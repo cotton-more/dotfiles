@@ -5,6 +5,7 @@
 [core]
     editor = vim
     whitespace = cr-at-eol
+	excludesfile = /Users/inikulin/.gitignore_global
 
 [color]
     branch = auto
@@ -24,7 +25,7 @@
     st = status -sb
     stat = status
     ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short
-    standup = log --since '1 day ago' --oneline --author <vansanblch@gmail.com>
+    standup = log --all --since '1 day ago' --oneline --author=\"Ivan Nikulin\"
     graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
     # jwiegley/git-scripts
     tree = !git-forest --pretty=format:\"%C(red)%h [%p] %C(magenta)(%ar) %C(blue)%an %C(reset)%s\" --style=15 --reverse
@@ -50,3 +51,13 @@ cmd = "vim $MERGED -c 'Gdiff'"
 	insteadOf = git://
 [push]
 	default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
